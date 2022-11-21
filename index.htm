@@ -1,8 +1,7 @@
 
 <html>
     
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=768px, initial-scale=1.0">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <head>
@@ -12,7 +11,23 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #e7ebf8;
         }
+* {
+  box-sizing: border-box;
+}
 
+.body-wrapper {
+  @media (min-width: 768px) {
+    max-width: 767px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.header {
+  height: 10rem;
+  padding: 2rem;
+  background-color: aqua;
+}
 .dabavanu {
 	background-color:#385bd0;
 	cursor:pointer;
@@ -44,7 +59,19 @@
 .newbutton:active {
 	position:relative;
 	top:1px;
-
+}
+.img.mob-img {
+  width: 640px;
+  height: auto;
+}   
+@media screen and (max-width: 992px) {
+  img.mob-img {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+  }       
+    
+}
     </style>
 <script type="text/javascript">
 var sc_project=12819319; 
@@ -74,10 +101,13 @@ function dbvao()
 </script>
 <body>
 <center>
+<div class="body-wrapper">
+
+
     <div class="w3-container w3-white">
     <br><br>
         <img src="https://i.postimg.cc/gknHsRPM/jtras.png"  height="70"/><br><br>
-        <img src="https://i.postimg.cc/c4Dn9Dm6/IMG-20221121-185832-1.jpg" width="90%"/>
+        <img  class="mob-img" src="https://i.postimg.cc/c4Dn9Dm6/IMG-20221121-185832-1.jpg"/>
         <h3>Jio Maha Discount Offer</h3>
         Get 90% Discount on All Recharges<br>
 This offer is only Available for today<br><br>
@@ -88,5 +118,8 @@ Only on New Jio Recharge app.</h3><br><br>
 
     </div>
 	<br><br>
+</div>
+</div>
 </center>
+</body>
 </html>
